@@ -1,0 +1,94 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import profile from '../assets/profile.jpeg';
+import architect from '../assets/architect.png';
+import sysops from '../assets/sysops.png';
+import developer from '../assets/developer.png';
+import terraform from '../assets/terraform.png';
+import CodeSVG from '../assets/code.svg.astro';
+import DumbellSVG from '../assets/dumbell.svg.astro';
+import CinemaSVG from '../assets/cinema.svg.astro';
+import MountainSVG from '../assets/mountain.svg.astro';
+---
+
+<Layout>
+	<header class="container mx-auto mt-2">
+		<a class="print:hidden underline" href="en/">Show me english version</a>
+		<div class="text-center">
+			<div class="flex justify-center items-center gap-x-2">
+				<Image class="rounded-4xl" src={profile} alt="Profil" width={56} height={56} loading="eager"/>
+				<h1 class="text-4xl font-extrabold">Adrian Galpin | 25 ans</h1>
+			</div>
+			<h2 class="font-extralight">Consultant Cloud AWS | License CESI Bac+3</h2>
+		</div>
+	</header>
+
+	<main class="container mx-auto">
+		<section>
+			<h2 class="text-2xl font-extrabold py-3">Biographie</h2>
+			<p>J'adore le cloud et tout ce qu'il apporte aux entreprises. Malheureusement, il est facile de disposer d'une mauvaise infrastructure sur ces plateformes. J'aime améliorer ces infrastructures en proposant des solutions permettant de réduire considérablement les coûts et les temps d'exécution.</p>
+		</section>
+
+		<section>
+			<h2 class="text-2xl font-extrabold py-3">Expériences</h2>
+			<div class="flex flex-col">
+				<div>
+					<h3 class="text-lg font-bold">Deloitte <span class="font-normal">(de 2021 à Aujourd'hui)</span></h3>
+					<p>Je suis chez Deloitte depuis plus de 3 ans, où j'ai travaillé dans la gestion d'une organisation sur AWS, ainsi que dans de nombreux domaines de SecOps et de FinOps.</p>
+				</div>
+				<div>
+					<h3 class="text-lg font-bold">Teréga <span class="font-normal">(de 2018 à 2021)</span></h3>
+					<p>J'ai effectué trois années d'alternance chez Teréga, où j'ai réalisé des projets basés sur des API, Terraform, Linux et le langage Python.</p>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<h2 class="text-2xl font-extrabold py-3">Certifications</h2>
+			<div class="flex gap-x-5">
+				<Image src={architect} alt="Badge AWS solutions architect" width={120} height={120} quality="max" loading="eager"/>
+				<Image src={sysops} alt="Badge AWS sysops administrator" width={120} height={120} quality="max" loading="eager"/>
+				<Image src={developer} alt="Badge AWS developer" width={120} height={120} quality="max" loading="eager"/>
+				<Image src={terraform} alt="Badge Terraform" width={120} height={120} quality="max" loading="eager"/>
+			</div>
+			<a class="print:hidden underline" href="https://www.credly.com/users/adrian-galpin">Lien vers Credly</a>
+		</section>
+
+		<section>
+			<h2 class="text-2xl font-extrabold py-3">Projets</h2>
+			<div class="flex flex-col">
+				<article>
+					<h3 class="text-lg font-bold">Une application de gestion d'interventions basé sur AWS DynamoDB</h3>
+					<p>J'ai développé une application entièrement hébergée sur AWS. Elle a été codée avec Angular côté frontend et API Gateway/Lambda/DynamoDB côté backend. Ce type d'application est très pratique pour les petites structures, car on dépasse rarement l'offre gratuite d'AWS.</p>
+				</article>
+				<article>
+					<h3 class="text-lg font-bold">Un site vitrine avec un score de 100 sur le Lighthouse de Chrome</h3>
+					<p>Un site développé avec Astro pour garantir un excellent référencement SEO et une légèreté optimale du code déployé.</p>
+				</article>
+			</div>
+		</section>
+
+		<section>
+			<h2 class="text-2xl font-extrabold py-3">Centres d'intérêt</h2>
+			<div class="flex gap-x-5">
+				<article class="flex flex-col items-center">
+					<CinemaSVG/>
+					<h3 class="text-lg">Cinéma</h3>
+				</article>
+				<article class="flex flex-col items-center">
+					<MountainSVG/>
+					<h3 class="text-lg">Randonnée</h3>
+				</article>
+				<article class="flex flex-col items-center">
+					<DumbellSVG/>
+					<h3 class="text-lg">Fitness</h3>
+				</article>
+				<article class="flex flex-col items-center">
+					<CodeSVG/>
+					<h3 class="text-lg">Code</h3>
+				</article>
+			</div>
+		</section>
+	</main>
+</Layout>

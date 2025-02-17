@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@layer base {
+  p {
+    @apply text-sm;
+  }
+}
