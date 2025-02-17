@@ -10,5 +10,6 @@ export default defineConfig({
     i18n: {
         locales: ["fr", "en"],
         defaultLocale: "fr",
-    }
+    },
+    site: 'https://flemax.github.io/me/'
 });
