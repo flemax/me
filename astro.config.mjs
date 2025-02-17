@@ -11,5 +11,6 @@ export default defineConfig({
         locales: ["fr", "en"],
         defaultLocale: "fr",
     },
-    site: 'https://flemax.github.io/me/'
+    site: 'https://flemax.github.io',
+    base: '/me'
 });
