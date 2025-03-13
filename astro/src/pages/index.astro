@@ -13,8 +13,8 @@ import MountainSVG from '../assets/mountain.svg.astro';
 ---
 
 <Layout>
-	<header class="container mx-auto mt-2">
-		<a class="print:hidden underline" href="en/">Show me english version</a>
+	<header class="container mx-auto mt-2 px-5">
+		<a class="print:hidden underline" href="/me/en/">Show me english version</a>
 		<div class="text-center">
 			<div class="flex justify-center items-center gap-x-2">
 				<Image class="rounded-4xl" src={profile} alt="Profil" width={56} height={56} loading="eager"/>
@@ -24,7 +24,7 @@ import MountainSVG from '../assets/mountain.svg.astro';
 		</div>
 	</header>
 
-	<main class="container mx-auto">
+	<main class="container mx-auto px-5">
 		<section>
 			<h2 class="text-2xl font-extrabold py-3">Biographie</h2>
 			<p>J'adore le cloud et tout ce qu'il apporte aux entreprises. Malheureusement, il est facile de disposer d'une mauvaise infrastructure sur ces plateformes. J'aime améliorer ces infrastructures en proposant des solutions permettant de réduire considérablement les coûts et les temps d'exécution.</p>
@@ -46,7 +46,7 @@ import MountainSVG from '../assets/mountain.svg.astro';
 
 		<section>
 			<h2 class="text-2xl font-extrabold py-3">Certifications</h2>
-			<div class="flex gap-x-5">
+			<div class="flex flex-wrap gap-5">
 				<Image src={architect} alt="Badge AWS solutions architect" width={120} height={120} quality="max" loading="eager"/>
 				<Image src={sysops} alt="Badge AWS sysops administrator" width={120} height={120} quality="max" loading="eager"/>
 				<Image src={developer} alt="Badge AWS developer" width={120} height={120} quality="max" loading="eager"/>
@@ -71,7 +71,7 @@ import MountainSVG from '../assets/mountain.svg.astro';
 
 		<section>
 			<h2 class="text-2xl font-extrabold py-3">Centres d'intérêt</h2>
-			<div class="flex gap-x-5">
+			<div class="flex flex-wrap gap-5">
 				<article class="flex flex-col items-center">
 					<CinemaSVG/>
 					<h3 class="text-lg">Cinéma</h3>
